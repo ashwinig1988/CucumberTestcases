@@ -18,24 +18,22 @@
 #Sample Feature Definition Template
 @tag
 Feature: Verification of "show rows" and "filter" functinality
- 
 
   @tag1
   Scenario: Verification of rows count after selecting a value from "Show Rows" drop down
     Given User opened "https://coinmarketcap.com/" website
     And click on "Show Rows" drop down
     When User select "100" from drop
-    Then User should displayed "100" rows only  
-   
+    Then User should displayed "100" rows only
 
   @tag2
   Scenario Outline: Verify filter button
-    Given  User opened "https://coinmarketcap.com/" website
-     And click on "Filters" button
+    Given User opened "https://coinmarketcap.com/" website
+    And click on "Filters" button
     When User provide filter <value> and <range>
     Then displayed record on page are correct as per the filter applied
 
     Examples: 
-      | value  | range |
-      | MarketCap |      $1B - $10B | 
-      | Price |     $101 - $1000 | 
+      | value     | range        |
+      | MarketCap | $1B - $10B   |
+      | Price     | $101 - $1000 |
