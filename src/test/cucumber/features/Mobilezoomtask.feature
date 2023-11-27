@@ -16,23 +16,23 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+
 Feature: Verification of Zoom App functionality
 
-  @tag1
+
   Scenario: Verify "Join" button should be disabled initially
     Given User Launch zoom app
     When User click on "Join a meeting" button
     Then User should see Join button is disabled 
 
-  @tag2
+
   Scenario: Verify join button is enabled after entering meeting id
     Given User Launch zoom app
     And User click on "Join a meeting" button
     When User enter "9 digits" meeting id
     Then User should see Join button is enabled
 
-  @tag3
+
   Scenario: Verify user should toggle on "Turn off my video" and click on join
     Given User Launch zoom app
     And User click on "Join a meeting" button
@@ -41,7 +41,7 @@ Feature: Verification of Zoom App functionality
     And Click on join
     Then "Turn off my video" button should be on and user will join meeting with video
 
-  @tag4
+
   Scenario: Verify user should get "Invalid meeting Id" text in pop up after aunch it back to foreground
     Given User Launch zoom app
     And User click on "Join a meeting" button
